@@ -17,7 +17,7 @@ class GalleryService {
     static public function fetchRecentMediaFiles() {
         $pdo = DbService::pdo();
 
-        $s = $pdo->prepare("select mediaFileId, starId, uri, thumbUri, dateCreated, typeCode, metadata from MediaFile limit 20");
+        $s = $pdo->prepare("select mediaFileId, starId, uri, thumbUri, title, dateCreated, typeCode, metadata from MediaFile limit 20");
         $s->execute();
         
         return $s->fetchAll(PDO::FETCH_CLASS, 'MediaFile');

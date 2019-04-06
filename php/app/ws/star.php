@@ -10,4 +10,4 @@
             echo json_encode(StarService::fetchStars());
             break;
     }
-?>
+?> 
