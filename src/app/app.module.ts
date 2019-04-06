@@ -1,26 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UpdateListComponent } from './updates/update-list/update-list.component';
-import { PictureUpdateComponent } from './updates/picture-update/picture-update.component';
-import { VideoUpdateComponent } from './updates/video-update/video-update.component';
-import { AudioUpdateComponent } from './updates/audio-update/audio-update.component';
-import { FileUpdateComponent } from './updates/file-update/file-update.component';
-
+import { SplashModule } from './splash/splash.module';
+import { SearchModule } from './search/search.module';
+import { ProfileModule } from './profile/profile.module';
+import { GalleryModule } from './gallery/gallery.module';
+import { BlogModule } from './blog/blog.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UpdateListComponent,
-    PictureUpdateComponent,
-    VideoUpdateComponent,
-    AudioUpdateComponent,
-    FileUpdateComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    SplashModule,
+    SearchModule,
+    ProfileModule,
+    GalleryModule,
+    BlogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
