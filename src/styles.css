@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: black;
+    color: hotpink;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+a, a:visited, a:hover {
+    color: turquoise;
+    text-decoration: none;
+}
+
+a:link {
+    color: turquoise;
+    text-decoration: underline;
+}
