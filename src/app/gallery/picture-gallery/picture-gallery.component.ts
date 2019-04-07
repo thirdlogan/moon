@@ -9,12 +9,21 @@ import { GalleryService } from 'src/app/core/services/gallery.service';
 })
 export class PictureGalleryComponent implements OnInit {
   public pics: MediaFile[] = <MediaFile[]>[];
-
+  public message: string;
+  
   constructor(private galleryService: GalleryService) { }
 
   ngOnInit() {
-    this.galleryService.fetchPics({}).subscribe((mediaFiles: MediaFile[]) => {
+    let search: any = {
+      mediaTypeCode: 'pic',
+    };
+
+    this.galleryService.fetchMediaFiles(search).subscribe((mediaFiles: MediaFile[]) => {
       this.pics = mediaFiles;
+
+      if (this.pics.length < 1) {
+        this.message = 'No videos found.';
+      }
     }, (err) => {
       console.log(err);
     })
