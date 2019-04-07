@@ -12,8 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
-    pathMatch: 'full',
-    component: PictureGalleryComponent,
+    loadChildren: './gallery/gallery.module#GalleryModule'
   }
 ];
 

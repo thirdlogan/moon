@@ -7,6 +7,10 @@ body {
     font-size: 12px;
 }
 
+* {
+    margin: 0;
+}
+
 a, a:visited, a:hover {
     color: turquoise;
     text-decoration: none;

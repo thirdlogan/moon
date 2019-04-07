@@ -8,7 +8,8 @@
     header('Content-Type: application/json');
 
     $payload = WebHelperService::getPayload();
-    $action = $payload->{'action'};
+    $action = (isset($payload->{'action'}) ? $payload->{'action'} : false);
+    $mediaTypeCode = (isset($payload->{'mediaTypeCode'}) ? $payload->{'mediaTypeCode'} : 'pic');
     
     switch ($action) {
         case 'fetch-media-types':
@@ -16,7 +17,7 @@
             break;
         
         case 'fetch-recent-media-files':
-            echo json_encode(GalleryService::fetchRecentMediaFiles());
+            echo json_encode(GalleryService::fetchRecentMediaFiles($mediaTypeCode));
             break;
 
         default:

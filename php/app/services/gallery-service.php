@@ -14,10 +14,10 @@ class GalleryService {
         return $s->fetchAll(PDO::FETCH_CLASS, 'MediaType');
     }
 
-    static public function fetchRecentMediaFiles() {
+    static public function fetchRecentMediaFiles($mediaTypeCode) {
         $pdo = DbService::pdo();
 
-        $s = $pdo->prepare("select mediaFileId, starId, uri, thumbUri, title, dateCreated, typeCode, metadata from MediaFile limit 20");
+        $s = $pdo->prepare("select mediaFileId, starId, uri, thumbUri, title, dateCreated, typeCode, metadata from MediaFile where typeCode = '$mediaTypeCode' limit 20");
         $s->execute();
         
         return $s->fetchAll(PDO::FETCH_CLASS, 'MediaFile');

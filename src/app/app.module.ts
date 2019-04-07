@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { SplashModule } from './splash/splash.module';
 import { SearchModule } from './search/search.module';
 import { ProfileModule } from './profile/profile.module';
-import { GalleryModule } from './gallery/gallery.module';
 import { BlogModule } from './blog/blog.module';
 import { CoreModule } from './core/core.module';
 
@@ -23,7 +22,6 @@ import { CoreModule } from './core/core.module';
     SplashModule,
     SearchModule,
     ProfileModule,
-    GalleryModule,
     BlogModule,
   ],
   providers: [],

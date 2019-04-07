@@ -16,7 +16,7 @@ export class GalleryService {
   
   constructor(private http: HttpClient) { }
 
-  public fetchPics(search: any): Observable<MediaFile[]> {
+  public fetchMediaFiles(search: any): Observable<MediaFile[]> {
     search['action'] = 'fetch-recent-media-files';
     
     return this.http.post<MediaFile[]>(this.endpointUri, search, this.httpOptions);
