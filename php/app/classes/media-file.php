@@ -8,7 +8,7 @@ class MediaFile {
     public $thumbUri;
     public $title;
     public $dateCreated;
-    public $mediumTypeCode;
+    public $typeCode;
     public $metadata;
 }
 

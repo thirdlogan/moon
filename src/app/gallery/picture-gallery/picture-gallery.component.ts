@@ -26,12 +26,12 @@ export class PictureGalleryComponent implements OnInit {
       if (this.pics.length < 1) {
         this.message = 'No videos found.';
       }
-    }, (err) => {
+    }, (err: any) => {
       console.log(err);
     })
   }
 
-  public showPicDetails(pic: MediaFile) {
+  public showPicDetails(pic: MediaFile): void {
     this.galleryService.currentMediaFile = pic;
     this.router.navigateByUrl('/gallery/details');
   }

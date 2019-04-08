@@ -51,7 +51,8 @@ create table MailMessage (
     senderId int not null references MoonUser(moonUserId),
     recipientId int not null references MoonUser(moonUserId),
     title varchar(255) not null,
-    body text
+    body text,
+    metadata JSON
 );
 
 

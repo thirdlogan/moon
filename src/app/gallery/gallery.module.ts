@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PictureGalleryComponent } from './picture-gallery/picture-gallery.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
 import { MediaFileDetailsComponent } from './media-file-details/media-file-details.component';
 
-const galleryRoutes = [
+const galleryRoutes: Routes = [
   {
     path: 'pics',
     component: PictureGalleryComponent,

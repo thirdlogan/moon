@@ -6,4 +6,10 @@ div.zoom-box {
 
 div.zoom-box > img {
     transform: translateX(-50%);
+    max-height: 90%;
+}
+
+div.zoom-box > video {
+    transform: translateX(-50%);
+    max-height: 90%;
 }

@@ -14,10 +14,12 @@ class StarService {
 
     static public function fetchStar($search) {
         $pdo = DbService::pdo();
-        $s = $pdo->prepare("select starId, moonUserId, profilePicUri, name, email, metadata from Star where starId = " + $search->starId);
+        $s = $pdo->prepare("select starId, moonUserId, profilePicUri, name, email, metadata from Star where starId = " . $search->starId);
         
         $s->execute();
-        return $s->fetch(PDO::FETCH_CLASS, 'Star');
+        $s->setFetchMode(PDO::FETCH_CLASS, 'Star');
+
+        return $s->fetch();
     }
 }
 

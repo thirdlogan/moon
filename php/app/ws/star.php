@@ -14,5 +14,9 @@
 
         case 'fetch-star': 
             echo json_encode(StarService::fetchStar($payload));
+            break;
+
+        default: 
+            echo '{}';
     }
 ?> 

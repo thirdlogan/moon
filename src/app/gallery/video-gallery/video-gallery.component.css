@@ -19,4 +19,15 @@ div.vid-box {
     width: 10em; 
     height: 10em; 
     border: 1px dashed grey;
+    margin: 2em;
+    padding: 1em;
+    text-align: center;
+    vertical-align: top;
+}
+
+div.vid-box > img {
+    display: block;
+    margin: auto;
+    max-height: 8em;
+    max-width: 8em;
 }

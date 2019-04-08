@@ -21,9 +21,8 @@ export class StarService {
     return this.http.post<Star[]>(this.endpointUri, search, this.httpOptions);
   }
 
-  public fetchStar(search: any) {
+  public fetchStar(search: any): Observable<Star> {
     search['action'] = 'fetch-star'
-    return this.http.post<Star[]>(this.endpointUri, search, this.httpOptions);
-
+    return this.http.post<Star>(this.endpointUri, search, this.httpOptions);
   }
 }

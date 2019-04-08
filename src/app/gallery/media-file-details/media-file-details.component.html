@@ -1,8 +1,9 @@
 <div>
   <div class="zoom-box">
     <img *ngIf="mediaFile.typeCode === 'pic'" [src]="mediaFile.uri" />
-    <video *ngIf="mediaFile.typeCode === 'vid'" [src]="mediaFile.uri"></video>
+    <video *ngIf="mediaFile.typeCode === 'vid'" [src]="mediaFile.uri" controls></video>
 
-    <p>{{ mediaFile.title }}</p>
+    <div>{{ mediaFile.title }}</div>
+    <div><a routerLink="/stars/stars-list">[{{ starName }}]</a></div>
   </div>
 </div>

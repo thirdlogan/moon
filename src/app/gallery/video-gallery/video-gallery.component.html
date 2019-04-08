@@ -3,7 +3,8 @@
 </div>
 
 <div *ngIf="vids.length > 0">
-  <div class="vid-box" *ngFor="let vid of vids">
+  <div class="vid-box" *ngFor="let vid of vids" (click)="showVidDetails(vid)">
+    <img src="{{ vidServerUri + vid.thumbUri }}" />
     <span>{{ vid.title }}</span>
   </div>
 </div>
