@@ -4,13 +4,20 @@ require('db-service.php');
 require('../classes/star.php');
 
 class StarService {
-    static public function fetchStars() {
+    static public function fetchStars($search) {
         $pdo = DbService::pdo();
-
         $s = $pdo->prepare("select starId, name, email, metadata from Star");
+        
         $s->execute();
-
         return $s->fetchAll(PDO::FETCH_CLASS, 'Star');
+    }
+
+    static public function fetchStar($search) {
+        $pdo = DbService::pdo();
+        $s = $pdo->prepare("select starId, name, email, metadata from Star where starId = " + $search->starId);
+        
+        $s->execute();
+        return $s->fetch(PDO::FETCH_CLASS, 'Star');
     }
 }
 
