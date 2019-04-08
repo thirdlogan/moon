@@ -1,12 +1,10 @@
-<div style="height: 100vh; width: 100vw; min-width: 800px; overflow: hidden;">
+<div id="app-container">
     
     <!-- header -->
-    <div style="height: 3em; background-color: grey;">
-        <h3>moon</h3>
-    </div>
+    <div id="app-title">moon</div>
 
     <!-- sidenav -->
-    <div style="display: inline-block; width: 7em; height: 100%; vertical-align: top; background-color: grey;">
+    <div id="sidenav">
         <nav>
             <ul>
                 <li>
@@ -15,12 +13,15 @@
                 <li>
                     <a routerLink="/gallery/vids">vids</a>
                 </li>
+                <li>
+                    <a routerLink='/stars/stars-list'>stars</a>
+                </li>
             </ul>
         </nav>
     </div>
 
     <!-- content area -->
-    <div style="display: inline-block; height: 100%; vertical-align: top; padding: 1em;">
+    <div id="main-content">
         <router-outlet></router-outlet>
     </div>
 </div>

@@ -1,8 +1,10 @@
 <h1>Video Gallery</h1>
 
-<ul *ngIf="vids.length > 0">
-  <li *ngFor="let vid of vids">{{ vid.title }}</li>
-</ul>
+<div *ngIf="vids.length > 0">
+  <div class="vid-box" *ngFor="let vid of vids">
+    <span>{{ vid.title }}</span>
+  </div>
+</div>
 
 <div class="message" *ngIf="message">
   {{ message }}

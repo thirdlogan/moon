@@ -1,9 +1,11 @@
 <h1>Picture Gallery</h1>
 
-<ul *ngIf="pics.length > 0">
-  <li *ngFor="let pic of pics">{{ pic.title }}</li>
-</ul>
+<div *ngIf="pics.length > 0">
+  <div class="pic-box" *ngFor="let pic of pics">
+    <span>{{ pic.title }}</span>
+  </div>
+</div>
 
 <div class="message" *ngIf="message">
-  {{ message }}
+  <span>{{ message }}</span>
 </div>

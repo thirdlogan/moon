@@ -1,3 +1,10 @@
 div.message {
     font-size: 20px;
 }
+
+div.vid-box {
+    display: inline-block; 
+    width: 100px; 
+    height: 100px; 
+    border: 1px dashed grey;
+}

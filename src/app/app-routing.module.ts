@@ -12,7 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
-    loadChildren: './gallery/gallery.module#GalleryModule'
+    loadChildren: './gallery/gallery.module#GalleryModule',
+  },
+  {
+    path: 'stars',
+    loadChildren: './stars/stars.module#StarsModule',
   }
 ];
 
