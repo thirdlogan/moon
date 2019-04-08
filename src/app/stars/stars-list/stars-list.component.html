@@ -1,0 +1,13 @@
+<h1>Stars</h1>
+
+<div>
+  <div *ngIf="stars.length > 0">
+    <div class="star-box" *ngFor="let star of stars">
+      <span>{{ star.name }}</span>
+    </div>
+  </div>
+
+  <div *ngIf="message">
+    {{ message }}
+  </div>
+</div>
