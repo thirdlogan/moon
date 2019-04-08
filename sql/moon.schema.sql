@@ -23,9 +23,19 @@ create table MediaType(
 );
 insert into MediaType VALUES ('pic', 'image file'), ('vid', 'video file'), ('txt', 'text file'), ('zip', 'zip file');
 
+create table MediaSet(
+    mediaSetId int primary key not null auto_increment,
+    starId int not null references Star(starId),
+    title varchar(255) not null,
+    description text not null,
+    isActive boolean not null default false,
+    metadata JSON
+);
+
 create table MediaFile ( 
     mediaFileId int primary key not null auto_increment,
     starId int not null references Star(starId),
+    mediaSetId int references MediaSet(mediaSetId),
     title varchar(255) not null,
     uri varchar(255) not null,
     thumbUri varchar(255),
