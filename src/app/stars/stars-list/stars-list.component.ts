@@ -10,6 +10,7 @@ import { StarService } from 'src/app/core/services/stars.service';
 export class StarsListComponent implements OnInit {
   public stars: Star[] = <Star[]>[];
   public message: string = '';
+  public picServerUri: string = 'http://localhost:8000';
   
   constructor(private starService: StarService) { }
 

@@ -1,10 +1,31 @@
+div.section-title {
+    text-align: center;
+}
+
+div.section-title > h1::before {
+    content: '[';
+}
+div.section-title > h1::after {
+    content: ']';
+}
+
 div.message {
     font-size: 20px;
 }
 
 div.pic-box {
     display: inline-block; 
-    width: 100px; 
-    height: 100px; 
+    width: 10em; 
+    height: 10em; 
     border: 1px dashed grey;
+    margin: 2em;
+    padding: 1em;
+    text-align: center;
+}
+
+div.pic-box > img {
+    display: block;
+    margin: auto;
+    max-height: 8em;
+    max-width: 8em;
 }

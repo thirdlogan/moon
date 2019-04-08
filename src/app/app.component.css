@@ -3,6 +3,7 @@ div#app-container {
     width: 100vw; 
     min-width: 800px; 
     position: relative;
+    overflow: hidden;
 }
 
 div#app-title {
@@ -45,4 +46,5 @@ div#main-content {
     border-radius: 1em 0 0 0; 
     background-color: black; 
     box-shadow: 0 0 1em 0.5em black;
+    overflow: auto;
 }

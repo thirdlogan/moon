@@ -1,0 +1,9 @@
+div.zoom-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+div.zoom-box > img {
+    transform: translateX(-50%);
+}

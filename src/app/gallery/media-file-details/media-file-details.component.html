@@ -1,0 +1,8 @@
+<div>
+  <div class="zoom-box">
+    <img *ngIf="mediaFile.typeCode === 'pic'" [src]="mediaFile.uri" />
+    <video *ngIf="mediaFile.typeCode === 'vid'" [src]="mediaFile.uri"></video>
+
+    <p>{{ mediaFile.title }}</p>
+  </div>
+</div>

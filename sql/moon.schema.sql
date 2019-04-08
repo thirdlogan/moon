@@ -5,6 +5,7 @@ create table MoonUser (
     passHash varchar(255) not null,
     name varchar(255) not null,
     email varchar(255) not null,
+    profilePicUri varchar(255),
     joinedDate timestamp,
     metadata JSON
 );
@@ -14,6 +15,7 @@ create table Star (
     moonUserId int not null references MoonUser(moonUserId),
     name varchar(255) not null,
     email varchar(255) not null,
+    profilePicUri varchar(255) not null,
     metadata JSON
 );
 

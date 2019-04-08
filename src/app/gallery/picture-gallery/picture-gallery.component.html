@@ -1,7 +1,10 @@
-<h1>Picture Gallery</h1>
+<div class="section-title">
+  <h1>Picture Gallery</h1>
+</div>
 
 <div *ngIf="pics.length > 0">
-  <div class="pic-box" *ngFor="let pic of pics">
+  <div class="pic-box" *ngFor="let pic of pics" (click)="showPicDetails(pic)">
+    <img src="{{ picServerUri + pic.thumbUri }}" />
     <span>{{ pic.title }}</span>
   </div>
 </div>

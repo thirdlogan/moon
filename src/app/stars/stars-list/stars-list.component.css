@@ -1,6 +1,27 @@
+div.section-title {
+    text-align: center;
+}
+
+div.section-title > h1::before {
+    content: '[';
+}
+div.section-title > h1::after {
+    content: ']';
+}
+
 div.star-box {
     display: inline-block; 
-    width: 100px; 
-    height: 100px; 
+    width: 10em; 
+    height: 10em; 
+    padding: 1em;
+    margin: 2em;
     border: 1px dashed grey;
+    text-align: center;
+}
+
+div.star-box > img {
+    display: block;
+    margin: auto;
+    max-height: 8em;
+    max-width: 8em;
 }

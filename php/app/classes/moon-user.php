@@ -6,6 +6,7 @@ class MoonUser {
     public $passHash;
     public $name;
     public $email;
+    public $profilePicUri;
     public $joinedDate;
     public $metadata;
 }

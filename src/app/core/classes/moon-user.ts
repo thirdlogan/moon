@@ -4,6 +4,7 @@ class MoonUser {
     public passHash: string;
     public name: string;
     public email: string;
+    public profilePicUri: string;
     public joinedDate: Date;
     public metadata: any;
 }

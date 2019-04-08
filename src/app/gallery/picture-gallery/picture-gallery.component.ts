@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaFile } from 'src/app/core/classes/media-file';
 import { GalleryService } from 'src/app/core/services/gallery.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-picture-gallery',
@@ -10,8 +11,9 @@ import { GalleryService } from 'src/app/core/services/gallery.service';
 export class PictureGalleryComponent implements OnInit {
   public pics: MediaFile[] = <MediaFile[]>[];
   public message: string;
+  public picServerUri: string = 'http://localhost:8000';
   
-  constructor(private galleryService: GalleryService) { }
+  constructor(private router: Router, private galleryService: GalleryService) { }
 
   ngOnInit() {
     let search: any = {
@@ -27,6 +29,11 @@ export class PictureGalleryComponent implements OnInit {
     }, (err) => {
       console.log(err);
     })
+  }
+
+  public showPicDetails(pic: MediaFile) {
+    this.galleryService.currentMediaFile = pic;
+    this.router.navigateByUrl('/gallery/details');
   }
 
 }

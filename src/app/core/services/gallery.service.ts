@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MediaFile } from '../classes/media-file';
+import { MediaSet } from '../classes/media-set';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,9 @@ export class GalleryService {
       'Content-Type': 'application/json',
     })
   };
+
+  public currentMediaSet: MediaSet = new MediaSet();
+  public currentMediaFile: MediaFile = new MediaFile();
   
   constructor(private http: HttpClient) { }
 
